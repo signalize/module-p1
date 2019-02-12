@@ -1,0 +1,28 @@
+{
+  "name": "signalize/module-p1",
+  "description": "P1 Slimme Meter",
+  "type": "signalize-module",
+  "authors": [
+    {
+      "name": "Signalize",
+      "email": "info@signalize.nl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Signalize\\ModuleP1\\": "src/"
+    }
+  },
+  "require": {
+    "signalize/signalize": "^1.0"
+  },
+  "license": [
+    "MIT"
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "branch-alias": {
+      "master": "1.0.x-dev"
+    }
+  }
+}
