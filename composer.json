@@ -20,10 +20,10 @@
   "license": [
     "MIT"
   ],
+  "bin": [
+    "bin/service-module-p1"
+  ],
   "scripts": {
-    "signalize-module-p1": [
-      "\\Signalize\\ModuleP1\\Service::Work"
-    ],
     "services/module-p1": [
       "\\Signalize\\ModuleP1\\Service::Convert"
     ]

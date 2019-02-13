@@ -12,3 +12,4 @@ if (!file_exists("composer.json")) {
 
 /** @noinspection PhpIncludeInspection */
 require("vendor/autoload.php");
+return new \Signalize\ModuleP1\Service();

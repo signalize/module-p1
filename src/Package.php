@@ -1,6 +1,6 @@
 <?php
 
-namespace Signalize\Modules\P1;
+namespace Signalize\ModuleP1;
 
 class Package
 {
