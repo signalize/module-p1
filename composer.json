@@ -14,7 +14,7 @@
     }
   },
   "require": {
-    "signalize/signalize": "^1.0",
+    "signalize/signalize": "dev-master",
     "ext-json": "*"
   },
   "license": [
