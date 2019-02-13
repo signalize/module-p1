@@ -21,12 +21,8 @@
     "MIT"
   ],
   "bin": [
-    "bin/service-module-p1"
+    "bin/service/module-p1",
+    "bin/command/module-p1"
   ],
-  "scripts": {
-    "services/module-p1": [
-      "\\Signalize\\ModuleP1\\Service::Convert"
-    ]
-  },
   "minimum-stability": "dev"
 }
