@@ -2,14 +2,33 @@
 
 namespace Signalize\Modules\P1;
 
-class Package extends \Signalize\Daemon\Package
+class Package
 {
+    protected $package;
+
     public function __construct($package)
     {
         $this->package = explode("\r\n", $package);
     }
 
-    public function getUsage()
+    public function __toString()
+    {
+        return json_encode($this->toArray());
+    }
+
+    public function toArray()
+    {
+        return [
+            'electricity' => [
+                'usage' => $this->getUsage(),
+                'result' => $this->getReturn()
+            ],
+            'gas' => $this->getGas(),
+        ];
+    }
+
+
+    private function getUsage()
     {
         return [
             "meter1" => $this->getValue(4),
@@ -17,7 +36,7 @@ class Package extends \Signalize\Daemon\Package
         ];
     }
 
-    public function getReturn()
+    private function getReturn()
     {
         return [
             "meter1" => $this->getValue(6),
@@ -25,7 +44,7 @@ class Package extends \Signalize\Daemon\Package
         ];
     }
 
-    public function getGas()
+    private function getGas()
     {
         return $this->getValue(33, 1);
     }
@@ -40,17 +59,5 @@ class Package extends \Signalize\Daemon\Package
         }, $values);
 
         return floatval($values[$cursor]);
-    }
-
-
-    public function toArray()
-    {
-        return [
-            'electricity' => [
-                'usage' => $this->getUsage(),
-                'result' => $this->getReturn()
-            ],
-            'gas' => $this->getGas(),
-        ];
     }
 }

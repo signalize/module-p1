@@ -14,9 +14,18 @@
     }
   },
   "require": {
-    "signalize/signalize": "^1.0"
+    "signalize/signalize": "^1.0",
+    "ext-json": "*"
   },
   "license": [
     "MIT"
-  ]
+  ],
+  "scripts": {
+    "signalize-module-p1": [
+      "\\Signalize\\ModuleP1\\Service::Work"
+    ],
+    "services/module-p1": [
+      "\\Signalize\\ModuleP1\\Service::Convert"
+    ]
+  }
 }
