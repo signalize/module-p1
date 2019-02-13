@@ -27,5 +27,6 @@
     "services/module-p1": [
       "\\Signalize\\ModuleP1\\Service::Convert"
     ]
-  }
+  },
+  "minimum-stability": "dev"
 }
