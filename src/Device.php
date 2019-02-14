@@ -2,11 +2,9 @@
 
 namespace Signalize\ModuleP1;
 
-use Signalize\Hardware\Serial as Serial;
-
-class Device extends Serial
+class Device extends \Signalize\Hardware\Serial
 {
-    public function process($chuck, $buffer)
+    public function process($chuck, $buffer): Package
     {
         if (substr($buffer, 0, 1) === '/') {
             if (substr($chuck, 0, 1) === '!') {

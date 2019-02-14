@@ -2,7 +2,7 @@
 
 namespace Signalize\ModuleP1;
 
-class Package
+class Package extends \Signalize\Hardware\Package
 {
     protected $package;
 
@@ -11,12 +11,7 @@ class Package
         $this->package = explode("\r\n", $package);
     }
 
-    public function __toString()
-    {
-        return json_encode($this->toArray());
-    }
-
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'electricity' => [
