@@ -2,7 +2,7 @@
 
 namespace Signalize\ModuleP1;
 
-class Package extends \Signalize\Hardware\Package
+class Package extends \Signalize\Service\Package
 {
     protected $package;
 
