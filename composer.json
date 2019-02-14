@@ -21,8 +21,7 @@
     "MIT"
   ],
   "bin": [
-    "bin/service/module-p1",
-    "bin/command/module-p1"
+    "bin/service-module-p1"
   ],
   "minimum-stability": "dev"
 }
