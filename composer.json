@@ -22,6 +22,5 @@
   ],
   "bin": [
     "bin/service-module-p1"
-  ],
-  "minimum-stability": "dev"
+  ]
 }
