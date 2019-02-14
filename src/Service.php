@@ -8,16 +8,26 @@ class Service extends Base
 {
     public function worker()
     {
-        $device = new Device("/dev/ttyUSB0", 115200);
-        $device->subscribe(function (Package $data) {
-            $this->send($data);
-        });
+//        $device = new Device("/dev/ttyUSB0", 115200);
+//        $device->subscribe(function (Package $data) {
+//            $this->send($data);
+//        });
+        while (true) {
+            $this->send(json_encode([
+                "data" => "dummy"
+            ]));
+            sleep(1);
+        }
+
+
     }
 
 
-    public static function converter(string $data): string
+    public function execute(string $data)
     {
-        return $data;
+        $this->send(json_encode([
+            "data" => "hello"
+        ]));
     }
 
 
