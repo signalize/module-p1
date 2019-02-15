@@ -2,24 +2,20 @@
 
 namespace Signalize\ModuleP1;
 
-class Package extends \Signalize\Service\Package
+class Package extends \Signalize\Socket\Package
 {
     protected $package;
 
     public function __construct($package)
     {
         $this->package = explode("\r\n", $package);
-    }
-
-    public function toArray(): array
-    {
-        return [
+        parent::__construct([
             'electricity' => [
                 'usage' => $this->getUsage(),
                 'result' => $this->getReturn()
             ],
             'gas' => $this->getGas(),
-        ];
+        ]);
     }
 
 

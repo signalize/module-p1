@@ -3,9 +3,11 @@
 namespace Signalize\ModuleP1;
 
 use Signalize\Service\Base;
+use Signalize\Socket\Package;
 
 class Service extends Base
 {
+
     public function worker()
     {
         $device = new Device("/dev/ttyUSB0", 115200);
@@ -14,10 +16,9 @@ class Service extends Base
         });
     }
 
-    public function execute(string $data)
+    public function execute(Package $package)
     {
-        # There are no commands defined
+        // TODO: Implement execute() method.
     }
-
 
 }
