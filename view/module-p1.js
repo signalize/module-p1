@@ -1,4 +1,4 @@
-import {Widget} from "/js/widget.js";
+import {Widget} from "js/widget.js";
 
 export class ModuleP1 {
     constructor() {
