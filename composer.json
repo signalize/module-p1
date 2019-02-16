@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "post-install-cmd": [
+      "touch hello.txt",
       "ln -s vendor/signalize/module-p1/view vendor/signalize/signalize/public/components/module-p1"
     ]
   }
