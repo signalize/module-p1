@@ -11,18 +11,18 @@ customElements.define('module-p1', class extends Widget {
 
         <h2>Result</h2>
         ${data ? `
-        	<div>${data.electricity.result.meter1}</div>
-			<div>${data.electricity.result.meter2}</div>
+        	<div>${data.energy.usage.low}</div>
+			<div>${data.energy.usage.high}</div>
 			<h2>Usage</h2>
-	        <div>${data.electricity.usage.meter1}</div>
-	        <div>${data.electricity.usage.meter2}</div>
+	        <div>${data.energy.result.low}</div>
+	        <div>${data.energy.result.high}</div>
         ` : `
         	Loading...
         `}
         
         <h1>Gas</h1>
 		${data ? `
-        	<div>Amount: ${data.gas}</div>
+        	<div>Amount: ${data.gas.usage.total}</div>
         ` : `
         	Loading...
         `}
