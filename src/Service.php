@@ -40,18 +40,8 @@ class Service extends Base
 
         $data = Database::collection('statistics')->find(function ($row) use ($from, $untill) {
             return ($row['datetime'] > $from && $row['datetime'] < $untill);
-        });
-
-
-        $plot = [];
-        foreach ($data->toArray() as $row) {
-            $date = date("ymdH", $row->datetime);
-            if (!isset($plot[$date])) {
-                $plot[$date] = 0;
-            }
-            $plot[$date]++;
-        }
-        return new Package($plot);
+        })->toArray();
+        return new Package($data);
     }
 
 }
