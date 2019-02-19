@@ -39,7 +39,7 @@ class Service extends Base
         $untill = $package->offsetExists('untill') ? $package->offsetGet('untill') : strtotime(date("d-m-Y 23:59:59"));
 
         $data = Database::collection('statistics')->find(function ($row) use ($from, $untill) {
-            return ($row->datetime > $from && $row->datetime < $untill);
+            return ($row['datetime'] > $from && $row['datetime'] < $untill);
         });
 
 
